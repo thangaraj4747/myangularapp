@@ -1,0 +1,11 @@
+<app-home></app-home>
+    <div class="newslist" *ngFor="let x of newsdata.articles; index as i">
+        <div class="news">
+            <div class="container">
+                <div class='newsfeedtitle'><img src={{x.urlToImage}}/><br><b>{{x.author}}</b><br>
+                    {{x.title | slice:0:60}}...<br>
+                    <input type="button" value="Get More Info" (click)="getMoreInfo(x)">
+                </div>
+            </div>
+        </div>
+    </div>
